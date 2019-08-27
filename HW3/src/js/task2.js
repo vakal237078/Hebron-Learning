@@ -9,6 +9,7 @@ function func(a, b, alph) {
     let S = Math.sqrt(p*(p-a)*(p-b)*(p-c));
 
 
+    console.log('Сторона с равна: ' + c);
     console.log('Площадь триугольника: ' + S.toFixed(2));
     console.log('Периметр триугольника: ' + P.toFixed(2));
 }
