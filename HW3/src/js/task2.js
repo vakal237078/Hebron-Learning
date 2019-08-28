@@ -8,10 +8,14 @@ function func(a, b, alph) {
     let p = P/2;
     let S = Math.sqrt(p*(p-a)*(p-b)*(p-c));
 
-
-    console.log(`Сторона с равна:  ${c}\n
+    if (a > 0 && b > 0 && alph > 0) {
+        debugger;
+        console.log(`Сторона с равна:  ${c}\n
     Площадь триугольника: ${Math.round(S)}\n
    Периметр триугольника: ${P.toFixed(2)}`);
+    } else {
+        console.log("Invalid data");
+    }
 }
 
 

@@ -3,7 +3,7 @@ let discount =+ prompt("Введите процент скидки");
 let result;
 let saved;
 
-if (sum !== "" && discount !== ""){
+if (sum > 0 && discount > 0){
     result = (sum/100)*discount;
     saved = sum - result;
     console.log(`Price without discount: ${sum}\n
