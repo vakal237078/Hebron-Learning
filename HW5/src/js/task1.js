@@ -6,7 +6,7 @@ if (getUserName === "" || getUserName === null) {
     alert("Canceled");
 } else if (getUserName.length < 4) {
     alert("I don't know any users having name length less than 4 symbols");
-} else if (getUserName !== "user") {
+} else if (getUserName !== "User") {
     alert("I don’t know you");
 } else if (getUserName === "user") {
     getUserPassword = prompt("Enter your password");
