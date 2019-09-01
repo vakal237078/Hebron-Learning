@@ -18,9 +18,9 @@ if (getUserName === "" || getUserName === null) {
     } else if (getUserPassword === "SuperUser") {
         console.log(date.getHours());
         if (date.getHours() < 20) {
-            alert("Good day!")
+            alert("Good day!");
         } else {
-            alert("Good evening!")
+            alert("Good evening!");
         }
     }
 }
