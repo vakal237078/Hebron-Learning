@@ -1,0 +1,196 @@
+/*
+ * Feel free to change name of colors if you need it
+ * Feel free to add new colors if you need it
+ */
+:root {
+    --bg-color--dark: #0a1223;
+    --bg-color--light: #fff;
+    --link: #5d5d5d;
+    --link--active: #54597d;
+    --link--hover: #54597d;
+    --article-title: #ddd;
+    --article-title--dark: #000;
+    --thumbnail--description: #5d5d5d;
+
+    /* These styles are needed only for media query max-width: 575px */
+
+    /* The 'Up' button (circle button at right bottom corner) */
+    --btn-color: #fff;
+    --btn-bg-color: #5ebcff;
+
+    --navigation-border-bottom: #ddd;
+    --thumbnail-title: #484747;
+}
+
+body {
+    margin: 0 auto;
+    background-color: var(--bg-color--dark);
+}
+
+header {
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 30px 50px;
+    margin: 0;
+}
+
+ul li {
+    font-size: 25px;
+    color: var(--link);
+    margin-left: 20px;
+}
+
+ul li:hover {
+    color: var(--link--hover);
+    cursor: pointer;
+}
+
+ul li.active-link {
+    color: var(--link--active);
+}
+
+.global-tittle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 140px auto;
+}
+
+.global-tittle h1 {
+    color: white;
+    font-size: 70px;
+    text-align: center;
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: 140px auto;
+}
+
+article {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+article:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+article div {
+    width: 50%;
+    text-align: justify;
+}
+
+article div:nth-child(2n) {
+    display: flex;
+    align-items: center;
+}
+
+article div h2 {
+    font-size: 40px;
+    background: -webkit-linear-gradient(10deg, #eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+article div p {
+    font-size: 20px;
+    color: var(--thumbnail--description);
+}
+
+article div img {
+    width: 100%;
+}
+
+button {
+    display: none;
+}
+
+@media screen and (max-width: 992px) {
+    header ul {
+        justify-content: center;
+    }
+
+    .global-tittle {
+        width: 90%;
+    }
+
+    .content article {
+        width: 80%;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+
+    .content article div {
+        width: 100%;
+    }
+
+    article div:nth-child(2n) {
+        margin: 50px 0;
+    }
+}
+
+
+@media screen and (max-width: 575px) {
+    body {
+        background-color: white;
+    }
+
+    ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    ul li {
+        font-size: 15px;
+        margin: 0;
+        padding: 10px;
+        border-bottom: 1px solid var(--navigation-border-bottom);
+    }
+
+    .global-tittle h1 {
+        font-size: 40px;
+        color: black;
+    }
+
+    article div h2 {
+        font-size: 20px;
+        color: var(--bg-color--dark);
+        background: none;
+        -webkit-text-fill-color: var(--bg-color--dark);
+    }
+
+    article div p {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--thumbnail--description);
+    }
+
+    button {
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+        display: block;
+        width: 50px;
+        height: 50px;
+        border: none;
+        border-radius: 50%;
+        outline: none;
+        background-color: var(--btn-bg-color);
+
+    }
+
+    button a {
+        color: white;
+        text-decoration: none;
+    }
+
+}
