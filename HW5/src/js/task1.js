@@ -1,4 +1,4 @@
-let getUserName = prompt("Enter your login");
+let getUserName = prompt("Enter your login").trim();
 let getUserPassword;
 let date = new Date();
 
@@ -24,7 +24,3 @@ if (getUserName === "" || getUserName === null) {
         }
     }
 }
-
-
-
-
